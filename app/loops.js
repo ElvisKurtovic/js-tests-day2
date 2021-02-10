@@ -54,3 +54,24 @@ for (start; start <= end; start++) {
 }
 return sum
 }
+
+
+function pY(a, b) {
+    let aSquare = a*a
+    let bSquare = b*b
+
+   return aSquare + bSquare
+
+}
+
+function Pow(base, exponent) {
+    let total = base
+    for (let index = 0; index < exponent; index++) {
+        total*=base
+        
+    } 
+    return total
+}
+function cubed(base) {
+    return base*base*base
+}

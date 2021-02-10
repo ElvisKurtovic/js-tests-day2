@@ -120,7 +120,16 @@ let staff = [
 { id: 999, name: 'Timma' }]
 
 function findById(id) {
-
+    let error = {
+        error: "No user with that id"
+    }
+for (let index = 0; index < staff.length; index++) {
+    if (id == staff[index].id) {
+        return staff[index].id
+    }
+    
+}
+return error
 }
 
 
