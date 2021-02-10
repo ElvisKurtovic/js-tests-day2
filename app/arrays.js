@@ -77,8 +77,24 @@ let flights = [{
 function flightCost(destination, firstClass) {
     //***hint: use the find method***
     
+    //console.log("flight log", destination, firstClass)
+    for (let index = 0; index < flights.length; index++) {
+        let ticket = flights[index]
+        //console.log("ticket#"+index, ticket)
+        if (destination.toUpperCase() == ticket.to) {
+            //console.log("ticket found")
+            if (firstClass == true) {
+                return ticket.prices.firstClass
+            }  
+            else{ return ticket.prices.standard
+            }
+        }
+        
+    }
 
 }
+
+flightCost("LAX", true)
 
 
 // ------------------------------------------
@@ -93,9 +109,15 @@ function flightCost(destination, firstClass) {
 // output: { error: "No user with that id." } 
 
 
-let staff = [{ id: 1, name: 'Jon' }, { id: 2, name: 'Yuli' }, { id: 21, name: 'Peter' },
-{ id: 17, name: 'St. MaryLou de la Playa Carmen' }, { id: 51, name: 'Doug' },
-{ id: 881, name: 'Paul' }, { id: 0, name: 'Jon' }, { id: 999, name: 'Timma' }]
+let staff = [
+{ id: 1, name: 'Jon' }, 
+{ id: 2, name: 'Yuli' }, 
+{ id: 21, name: 'Peter' },
+{ id: 17, name: 'St. MaryLou de la Playa Carmen' }, 
+{ id: 51, name: 'Doug' },
+{ id: 881, name: 'Paul' }, 
+{ id: 0, name: 'Jon' }, 
+{ id: 999, name: 'Timma' }]
 
 function findById(id) {
 
